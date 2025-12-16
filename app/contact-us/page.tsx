@@ -45,7 +45,7 @@ export default function ContactUs() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Get in Touch</h1>
           <p className={styles.heroSubtitle}>
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
         </div>
       </section>
@@ -146,7 +146,7 @@ export default function ContactUs() {
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                       <path d="M16.6667 5L7.5 14.1667L3.33333 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                    Message sent successfully! We'll get back to you soon.
+                    Message sent successfully! We&apos;ll get back to you soon.
                   </div>
                 )}
 

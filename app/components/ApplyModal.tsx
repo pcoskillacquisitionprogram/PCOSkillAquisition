@@ -49,12 +49,15 @@ export default function ApplyModal({ isOpen, onClose, prefilledSkill = '' }: App
   };
 
   const skillOptions = [
-    { value: 'Tailoring & Fashion Design', label: 'Tailoring & Fashion Design' },
-    { value: 'Welding & Metalwork', label: 'Welding & Metalwork' },
-    { value: 'Cosmetology & Beauty', label: 'Cosmetology & Beauty' },
-    { value: 'Electrical Installation', label: 'Electrical Installation' },
-    { value: 'Carpentry & Joinery', label: 'Carpentry & Joinery' },
+    { value: 'Tailoring', label: 'Tailoring' },
     { value: 'Catering & Food Service', label: 'Catering & Food Service' },
+    { value: 'Hair dressing', label: 'Hair dressing' },
+    { value: 'Cosmetology & Beauty', label: 'Cosmetology & Beauty' },
+    { value: 'Soap and Air Freshener Production', label: 'Soap and Air Freshener Production' },
+    { value: 'Web Design', label: 'Web Design' },
+    { value: 'Web Development', label: 'Web Development' },
+    { value: 'Photography', label: 'Photography' },
+    { value: 'Graphics Design', label: 'Graphics Design' },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -197,13 +200,13 @@ export default function ApplyModal({ isOpen, onClose, prefilledSkill = '' }: App
               onChange={handleChange}
               className={styles.textarea}
               rows={4}
-              placeholder="Tell us why you're interested in this skill..."
+              placeholder="Tell us why you&apos;re interested in this skill..."
             />
           </div>
 
           {submitStatus === 'success' && (
             <div className={styles.successMessage}>
-              Application submitted successfully! We'll contact you soon.
+              Application submitted successfully! We&apos;ll contact you soon.
             </div>
           )}
 

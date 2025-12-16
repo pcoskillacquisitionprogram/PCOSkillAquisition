@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { useApplyModal } from '../context/ApplyModalContext';
 import styles from './Navbar.module.css';
 
@@ -11,6 +12,10 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { openModal } = useApplyModal();
+  const pathname = usePathname();
+
+  const darkNavPages = ['/picture-gallery'];
+  const isDarkNav = pathname ? darkNavPages.includes(pathname) : false;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,12 +49,12 @@ export default function Navbar() {
   };
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${isDarkNav ? styles.darkNav : ''}`}>
       <nav className={styles.nav}>
         <Link href="/" className={styles.logoLink}>
           <div className={styles.logoContainer}>
             <Image
-              src="/logo.png"
+              src="/images/logo.png"
               alt="PCO Skills Logo"
               width={30}
               height={30}

@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './style.module.css';
 
@@ -48,7 +49,7 @@ const Gallery: React.FC = () => {
     document.body.style.overflow = 'unset';
   };
 
-  const navigateImage = (direction: 'next' | 'prev'): void => {
+  const navigateImage = useCallback((direction: 'next' | 'prev'): void => {
     if (!selectedImage) return;
 
     const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
@@ -61,7 +62,7 @@ const Gallery: React.FC = () => {
     }
     
     setSelectedImage(filteredImages[newIndex]);
-  };
+  }, [selectedImage, filteredImages]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent): void => {
@@ -74,7 +75,7 @@ const Gallery: React.FC = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage, filteredImages]);
+  }, [selectedImage, filteredImages, navigateImage]);
 
   const filterCategories: FilterCategory[] = ['all', 'training', 'events', 'outreach'];
 
@@ -117,9 +118,11 @@ const Gallery: React.FC = () => {
               onClick={() => openLightbox(image)}
               className={styles.gridItem}
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
+                width={400}
+                height={300}
                 loading="lazy"
                 className={styles.gridImage}
               />
@@ -178,10 +181,13 @@ const Gallery: React.FC = () => {
 
           {/* Image */}
           <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
-            <img
+            <Image
               src={selectedImage.src}
               alt={selectedImage.alt}
+              width={1200}
+              height={800}
               className={styles.lightboxImage}
+              priority
             />
             <p className={styles.lightboxCaption}>
               {selectedImage.alt}

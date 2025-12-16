@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileText, UserCheck, GraduationCap } from 'lucide-react';
 import styles from './HowItWorks.module.css';
+import { useApplyModal } from '@/app/context/ApplyModalContext';
 
 interface Step {
   number: number;
@@ -10,6 +11,7 @@ interface Step {
 }
 
 const HowItWorksSection: React.FC = () => {
+  const { openModal } = useApplyModal();
   const steps: Step[] = [
     {
       number: 1,
@@ -92,7 +94,7 @@ const HowItWorksSection: React.FC = () => {
         </p>
 
         <div className={styles.ctaContainer}>
-          <button className={styles.ctaButton}>Start Application</button>
+          <button onClick={() => openModal()} className={styles.ctaButton}>Start Application</button>
         </div>
       </div>
     </section>

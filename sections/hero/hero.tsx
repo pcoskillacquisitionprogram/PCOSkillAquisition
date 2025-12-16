@@ -12,19 +12,19 @@ const Hero: React.FC = () => {
       <div className={styles.heroBackground}>
         {/* Background image set via CSS */}
       </div>
-      
+
       <div className={styles.overlay}></div>
-      
+
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.headline}>
-            Learn a Practical Skill. Get Trained. Start a Career.
+            Empowering Youths with Skills for Independence and Impact
           </h1>
-          
+
           <p className={styles.subtext}>
-            Apply online, get matched, and receive hands-on skill training through our programs.
+            Pastor Chris Oyakhilome Skill Acquisition is an initiative birthed by Pastor Chris Oyakhilome to equip youths with free, practical skills that promote self-reliance, productivity, and positive contribution to society.
           </p>
-          
+
           <div className={styles.ctaGroup}>
             <button onClick={() => openModal()} className={styles.primaryCta}>
               Apply Now
@@ -34,17 +34,17 @@ const Hero: React.FC = () => {
               How It Works
             </Link>
           </div>
-          
+
           <div className={styles.trustIndicators}>
             <div className={styles.trustItem}>
               <svg className={styles.checkIcon} width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M16.6667 5L7.5 14.1667L3.33333 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M16.6667 5L7.5 14.1667L3.33333 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <span>Trusted by 1,000+ applicants</span>
             </div>
             <div className={styles.trustItem}>
               <svg className={styles.checkIcon} width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M16.6667 5L7.5 14.1667L3.33333 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M16.6667 5L7.5 14.1667L3.33333 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <span>Offline training • Verified instructors</span>
             </div>

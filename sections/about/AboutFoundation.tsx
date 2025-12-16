@@ -68,7 +68,7 @@ const AboutFoundation: React.FC = () => {
         <div className={styles.content}>
           <div className={styles.textColumn}>
             <p className={styles.paragraph}>
-              Founded in 2023, Pastor Chris Skill Acquisition was established in 
+              Founded in 2023, Pastor Chris Oyakhilome Skill Acquisition was established in 
               response to a clear vision to demonstrate practical love by equipping 
               individuals with relevant, real‑world skills.
             </p>
