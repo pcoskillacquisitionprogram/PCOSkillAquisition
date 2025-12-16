@@ -73,9 +73,9 @@ const UpcomingEvents: React.FC = () => {
           ))}
         </div>
 
-        <div className={styles.viewAllContainer}>
+        {/* <div className={styles.viewAllContainer}>
           <a href="#" className={styles.viewAllLink}>View all events</a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -78,7 +78,11 @@ const SecondaryCampus: React.FC = () => {
           <div className={styles.content}>
             <h2 className={styles.heading}>About Secondary School Campus</h2>
             <p className={styles.description}>
-              Located in the bustling heart of Lagos, this campus is dedicated to providing top-tier skill acquisition programs. Stay tuned for more details about our facilities, courses, and community impact.
+              Pastor Chris Oyakhilome Skill Acquisition recently carried out a Secondary Schools Skill Acquisition Campaign, reaching students across over four secondary schools at the same time.
+
+              Through this initiative, more than 500 students received hands-on exposure to practical skills such as Catering, Makeup, Soap Making, and Hair Styling, equipping them with early vocational knowledge and confidence for the future.
+
+              This campaign reflects our strong commitment to expanding skill acquisition into schools and communities, empowering young minds early and laying the foundation for a productive, self-reliant generation.
             </p>
           </div>
         </div>
